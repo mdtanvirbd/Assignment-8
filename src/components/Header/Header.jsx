@@ -40,6 +40,30 @@ const Header = () => {
           Page to Read
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive
+              ? "text-[#23BE0A] border border-[#23BE0A] px-3 py-1"
+              : "text-black px-3 py-1"
+          }
+        >
+          About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive
+              ? "text-[#23BE0A] border border-[#23BE0A] px-3 py-1"
+              : "text-black px-3 py-1"
+          }
+        >
+          Contact
+        </NavLink>
+      </li>
     </>
   );
 

@@ -11,28 +11,21 @@ import PageToReade from './components/PageToReade/PageToReade.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import Root from './components/Root/Root.jsx';
 import BookDetails from './components/BookDetails/BookDetails.jsx';
+import About from './components/AboutUs/About.jsx';      // নতুন
+import Contact from './components/Contact/Contact.jsx'; // নতুন
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root></Root>,
-    errorElement: <ErrorPage></ErrorPage>,
+    element: <Root />,
+    errorElement: <ErrorPage />,
     children: [
-      {
-        path: "/",
-        element:<Home></Home>
-      },
-      {
-        path: "/listedbooks",
-        element: <ListedBooks></ListedBooks>,
-         
-      },
-      {
-        path:"/pagetoread",
-        element:<PageToReade></PageToReade>,
-      },
-      { path: "/books/:bookId", element: <BookDetails/> },
-      
+      { path: "/", element: <Home /> },
+      { path: "/listedbooks", element: <ListedBooks /> },
+      { path: "/pagetoread", element: <PageToReade /> },
+      { path: "/books/:bookId", element: <BookDetails /> },
+      { path: "/about", element: <About></About> },     // নতুন route
+      { path: "/contact", element: <Contact /> }, // নতুন route
     ]
   },
 ]);
